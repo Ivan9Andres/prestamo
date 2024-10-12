@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/inicio.css">
+</head>
+
+<body>
+    <div>
+        <h2 class="precio">
+            1000000
+        </h2>
+        <h3>televisor</h3>
+        <h2 class="total"></h2>
+        <button class="resultado"> total a pagar en 12 cuotas </button>
+    </div>
+
+    <script>
+        const precio = $(".precio");
+        const total = $(".total");
+        const resultado = $(".resultado");
+
+        function porcentaje (){
+            
+        }
+
+        resultado.click(
+            function () {
+                let resultado = (precio / 12)
+
+                return total
+            }
+        )
+    </script>
+    <hr>
+    <div>
+        <h2 class="precio">
+            1000000
+        </h2>
+        <h3>televisor</h3>
+        <h2 class="total"></h2>
+        <button onclick="resultado()">total a pagar en 12 cuotas</button>
+    </div>
+
+    <script>
+        function resultado() {
+            $.post("calculo.php",
+                function (data, textStatus, jqXHR) {
+
+                },
+                "dataType"
+            );
+        }
+    </script>
+
+
+
+</body>
+
+</html>
